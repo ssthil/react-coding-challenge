@@ -1,0 +1,7 @@
+.search-control {
+    margin-top: 20px;
+}
+
+::placeholder {
+    color: rgb(104, 49, 126) !important;
+}
