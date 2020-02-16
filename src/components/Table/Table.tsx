@@ -10,6 +10,20 @@ const selectedClass = (value: any) => {
   return value.toLowerCase();
 };
 
+const TableHeader = () => (
+  <thead>
+    <tr>
+      <th>Shipment ID</th>
+      <th>Name</th>
+      <th>User ID</th>
+      <th>Type</th>
+      <th>Mode</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+);
 
 const DataTable = (props: ITableProps) => {
   return (
@@ -17,18 +31,7 @@ const DataTable = (props: ITableProps) => {
       <Row>
         <Col>
           <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Shipment ID</th>
-                <th>Name</th>
-                <th>User ID</th>
-                <th>Type</th>
-                <th>Mode</th>
-                <th>Origin</th>
-                <th>Destination</th>
-                <th>Status</th>
-              </tr>
-            </thead>
+            <TableHeader />
             <tbody className="data">
               {props.data.map((result: any) => (
                 <tr key={result.id}>
