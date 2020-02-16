@@ -37,8 +37,6 @@ const App = () => {
     fetchData();
   }, [searchTerm]);
 
-  console.log(data);
-  console.log(searchTerm);
   return (
     <div className="wrapper">
       <Header />
