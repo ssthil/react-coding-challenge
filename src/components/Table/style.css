@@ -1,7 +1,30 @@
 .table {
-    margin-top: 15px;
+  margin-top: 15px;
 }
-.data{
-    font-size: 13px;
-    font-weight: 100;
+.table th {
+  color: #7c4b8c;
+}
+
+.table td {
+  color: #3a273b;
+}
+.data {
+  font-size: 13px;
+}
+
+td.status {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+td.active {
+  color: #068121;
+}
+
+td.completed {
+  color: #e45;
+}
+
+td.new {
+  color: #06358b;
 }

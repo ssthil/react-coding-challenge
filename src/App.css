@@ -5,3 +5,12 @@
   border-radius: 6px;
   box-shadow: 0px 5px 12px 3px #c1a8d4;
 }
+
+.loading-container{
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  color: #a813e4;
+  padding: 50px;
+  text-align: center;
+}
