@@ -1,21 +1,11 @@
+import { IconButton, Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TablePagination, TableRow } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import React, { useState } from 'react';
-import {
-  Table,
-  TableRow,
-  TableHead,
-  TableBody,
-  TableCell,
-  TableContainer,
-  IconButton,
-  TableFooter,
-  TablePagination,
-} from '@material-ui/core';
 import FirstPageIcon from '@material-ui/icons/FirstPage';
-import LastPageIcon from '@material-ui/icons/LastPage';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import LastPageIcon from '@material-ui/icons/LastPage';
+import React, { useState } from 'react';
 import './style.css';
 
 const useStyles = makeStyles(theme => ({
@@ -123,8 +113,11 @@ export interface ITableProps {
 const DataTable = (props: ITableProps) => {
   const classes = useStyles();
 
+  const dataListPerPage: number = 20;
+
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(dataListPerPage);
+  // const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const emptyRows =
     rowsPerPage - Math.min(rowsPerPage, props.data.length - page * rowsPerPage);
@@ -191,7 +184,7 @@ const DataTable = (props: ITableProps) => {
           <TableFooter>
             <TableRow>
               <TablePagination
-                rowsPerPageOptions={[10, { label: 'All', value: -1 }]}
+                rowsPerPageOptions={[dataListPerPage, { label: 'All', value: -1 }]}
                 count={props.data.length}
                 rowsPerPage={rowsPerPage}
                 page={page}

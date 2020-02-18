@@ -24,13 +24,7 @@ const App = () => {
       let responseData = res.data;
       let filteredData = responseData.filter((result: any) => {
         let searchValue = searchTerm.toLowerCase();
-        return Object.keys(result).some(
-          key =>
-            result[key]
-              .toString()
-              .toLowerCase()
-              .search(searchValue) !== -1
-        );
+        return result.id.toLowerCase().indexOf( searchValue.toLowerCase() ) !== -1
       });
       setData(filteredData);
       setLoading(false);
