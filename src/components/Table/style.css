@@ -1,12 +1,13 @@
 .table {
-  margin-top: 15px;
+  margin-bottom: 0;
 }
 .table th {
-  color: #7c4b8c;
+  color: #332438;
+  background-color: #f3f3f3;
 }
 
 .table td {
-  color: #3a273b;
+  color: #403c40;
 }
 .data {
   font-size: 13px;
@@ -27,4 +28,9 @@ td.completed {
 
 td.new {
   color: #06358b;
+}
+
+.MuiPaper-elevation1 {
+  box-shadow: 0px 2px 1px -10px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }

@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Search from './components/Search/Search';
-import DataTable from './components/Table/Table';
+// import DataTable from './components/Table/Table';
+import DataTable from './components/Table/DataTable';
 
 const API_URL: string = 'http://localhost:3000/shipments';
 
@@ -47,6 +48,7 @@ const App = () => {
       )}
       <Search serachTerm={searchTerm} handleChange={handleChange} />
       <DataTable data={data} />
+      {/* <DataTable data={data} /> */}
     </div>
   );
 };
